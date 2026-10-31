@@ -1,0 +1,1 @@
+importScripts("vendor/beatgrid.js"),self.onmessage=a=>{const{id:e,pcm:t,sampleRate:r,fps:o,offset:f}=a.data;try{self.postMessage({id:e,analysis:self.beatgrid.analyze(t,r,{fps:o,offset:f})})}catch(s){self.postMessage({id:e,error:String(s&&s.message||s)})}};
